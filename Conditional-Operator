@@ -1,0 +1,13 @@
+"""
+
+"""
+
+#include <stdio.h>
+int main(void) {
+  int a, b, max;
+  printf("Geben sie zwei beliebige Zahlen an!\n");
+  scanf("%d %d",&a, &b);
+max = (a > b)? a : b;
+printf("Die groessere Zahl ist %d\n",max);
+
+}
