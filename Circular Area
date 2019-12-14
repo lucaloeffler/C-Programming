@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+  int radius = 0;
+  double A = 0; //DEC
+
+  printf("Geben sie den Radius ein: \n"); //Abfrage des Radius
+  scanf("%d", &radius);
+  
+  A = radius*M_PI;
+  printf("Die Kreisfleache betreagt: %f\n", A); //Berechnung 
+  return 0;
+}
