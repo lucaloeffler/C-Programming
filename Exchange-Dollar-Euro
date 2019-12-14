@@ -1,0 +1,47 @@
+#include <stdio.h>
+#define DKURS 1.40331182
+
+double euro2dollar( double euro) {
+	return euro*DKURS;
+}
+
+double dollar2euro( double dollar) {
+	return dollar/DKURS;
+}
+
+int main(void) {
+	double anfangsbetrag;
+	double endbetrag;
+	int umrechnung;
+
+	printf("Umrechnen von Dollar in Euro & von Euro in Dollar:\n\n");
+	do {
+		printf("Anfangsbetrag = "); scanf("%lf", &anfangsbetrag);
+	} while ( anfangsbetrag <= 0 );
+	do {
+		printf("Endbetrag = "); scanf("%lf", &endbetrag);
+	} while ( endbetrag <= 0 );
+
+	do {
+		printf("\n1 - von Euro in Dollar\n2 - von Dollar in Euro\nUmrechnung:"); scanf("%d", &umrechnung);
+	} while ( (umrechnung < 1)  || (umrechnung > 2) );
+
+	if (umrechnung == 1) {
+		printf("\n  Euro  |  Dollar");
+		printf("\n--------+--------");
+		// for
+		for (anfangsbetrag; anfangsbetrag <= endbetrag; anfangsbetrag=anfangsbetrag+10) {
+			printf("\n %6.2lf | %6.2lf", anfangsbetrag, euro2dollar(anfangsbetrag) );
+		}
+		
+	} else {
+		printf("\nDollar  |    Euro");
+		printf("\n--------+--------");
+		for (anfangsbetrag; anfangsbetrag <= endbetrag; anfangsbetrag=anfangsbetrag+10) {
+			printf("\n %6.2lf | %6.2lf", anfangsbetrag, dollar2euro(anfangsbetrag) );
+		}
+		
+	}
+
+	return 0;
+}
