@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void) {
+ int a;
+ 
+ printf("Bitte geben sie einen 6-stelligen Code ein:\n");
+a = scanf("%d", &a);
+
+if (a==123456){
+  printf("Hello World\n");}
+  else{
+    printf("Passwort ist falsch\n");
