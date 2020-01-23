@@ -1,0 +1,45 @@
+#include <stdio.h>
+float a;
+
+
+int main()
+{
+  printf("Welchen Geldbetrag möchten sie in Münzen tauschen?\n");
+  scanf("%f", &a);
+  
+  int euro2 = a/2;
+  a = a - euro2* 2;
+  
+  int euro1 = a;
+  a = a - euro1;
+  
+  int euro050 = a/0.5;
+  a = a - euro050* 0.5;
+  
+  int euro020 = a/0.2;
+  a = a - euro020* 0.2;
+  
+  int euro010 = a/0.1;
+  a = a - euro010* 0.1;
+  
+  int euro005 = a/0.05;
+  a = a - euro005* 0.05;
+  
+  int euro002 = a/0.02;
+  a = a - euro002* 0.02;
+  
+  int euro001 = a/0.01;
+  a = a - euro001* 0.01;
+  
+  printf("Sie bekommen %d mal 2 Euro Stücke\n", euro2); 
+  printf("Sie bekommen %d mal 1 Euro Stücke\n", euro1);
+  printf("Sie bekommen %d mal 0,50 Euro Stücke\n", euro050);
+  printf("Sie bekommen %d mal 0,20 Euro Stücke\n", euro020);
+  printf("Sie bekommen %d mal 0,10 Euro Stücke\n", euro010);
+  printf("Sie bekommen %d mal 0,5 Euro Stücke\n", euro005);
+  printf("Sie bekommen %d mal 0,2 Euro Stücke\n", euro002);
+  printf("Sie bekommen %d mal 0,1 Euro Stücke\n", euro001);
+  
+  return 0;
+  
+}
