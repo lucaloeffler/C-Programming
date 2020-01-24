@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int a,b;
+
+int maxi(int a,int b){ //Funktion Maximal
+  if (a > b){
+    return a;
+  }
+  else {
+    return b;
+  }
+}
+
+int mini(int a,int b){ //Funktion Minimal
+  if (b > a){
+    return a;
+  }
+  else {
+    return b;
+}
+}
+
+int main(void){
+  printf("Please enter two Numbers\n");
+  
+  scanf("%d %d",&a, &b);
+  if (a == b)
+  {
+  printf("Die Zahlen sind gleich \n");}
+  else{
+  printf("The Maximum is %d\n", maxi(a,b));
+  printf("The Minimum is %d", mini(a,b));
+}
+return 0;
+}
