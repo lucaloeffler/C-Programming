@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+//Struktur und Datentyp anlegen 
+struct node {
+  int value;
+  struct node *next;
+};
+  typedef struct node tnode;
+  typedef struct node *pnode;
+
+int main(void) {
+  //pointer start und current anlegen
+  pnode start = NULL;
+  pnode current = NULL;
+  
+  //Werte einlesen 
+  printf("Bitte geben sie 5 ganze Zahlen an:\n");
+  //for-Schleife
+  for(int i = 0; i < 5; i++){
+    pnode item = malloc(sizeof(tnode));
+    scanf("%d", &item->value);
+    item->next = NULL;
+    if (i == 0){//alternativ start == NULL
+      start = item;
+    }
+    else {
+     current->next = item;
+    }
+    current = item;
+  }
+  //Ausgabe
+  current = start;
+  printf("Die Liste lautet:\n");
+  do{
+    printf("%d, ", current->value);
+    current = current->next;
+  }while (current != NULL);
+  printf("\n");
+
+  return 0;
+}
