@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void){
+int a = 0;
+int summe = 0;
+double durchschnitt = 0;
+
+printf("Bitte gebn sie 5 Zahlen ein:\n");
+for(int i = 0; i < 5; i++){
+  scanf("%d",&a);
+  summe = summe + a;
+}
+durchschnitt = summe/5;
+printf("Der Durchschnitt betreagt: %f\n", durchschnitt);
+printf("Die Summe deiner Zahlen betreagt: %d\n", summe);
+
+return 0;  
+}
