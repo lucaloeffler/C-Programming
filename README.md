@@ -1,2 +1,2 @@
 # C-Programming
-While learing C at the university one collects a lot of basic code examples. Those ones will be collected here to help others!
+While learning the language C at the university I collected some fun exercises. Those are meant to help others!
